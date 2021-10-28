@@ -28,6 +28,7 @@ def main():
     # This function calculate rotates
     rotates_list = []
     user_rotates_number = None
+    user_k_number = -1
 
     # output
     print("Please enter 1 integer at a time. Enter -1 to end.")
@@ -54,11 +55,10 @@ def main():
         # output
         print("You didn't enter an integer.")
 
-    # remove -1
-    rotates_list.pop()
-
     # check k length
-    if user_k_number >= 0 and user_k_number <= len(rotates_list):
+    if user_k_number >= 0 and user_k_number <= len(rotates_list) - 1:
+        # remove -1
+        rotates_list.pop()
         # call functions
         rotates_number = calculated_rotates(
             rotates_list, calculate_k_number=user_k_number
