@@ -10,13 +10,15 @@ def calculated_rotates(calculate_user_number, calculate_k_number):
     number_length = len(calculate_user_number)
     rotates_number = 0
     rotates_number_list = []
+    loop_number_first = 0
+    loop_number_second = 0
 
     # process
     for loop_number_first in range(calculate_k_number, number_length):
         rotates_number = calculate_user_number[loop_number_first]
         rotates_number_list.append(rotates_number)
-    for loop_number_first in range(0, calculate_k_number):
-        rotates_number = calculate_user_number[loop_number_first]
+    for loop_number_second in range(0, calculate_k_number):
+        rotates_number = calculate_user_number[loop_number_second]
         rotates_number_list.append(rotates_number)
 
     return rotates_number_list
@@ -26,8 +28,6 @@ def main():
     # This function calculate rotates
     rotates_list = []
     user_rotates_number = None
-    loop_number_first = 0
-    loop_number_second = 0
 
     # output
     print("Please enter 1 integer at a time. Enter -1 to end.")
